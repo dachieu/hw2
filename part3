@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+<script type="text/javascript" src="class-email-dictionary.json"></script>
+
+
+
+</head>
+
+<body>
+<h1>Contact Names</h1>
+<p>
+
+<input type="text" id="userInput" </input>
+<button id="btn1"> search
+</button>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+<script>
+var data = {
+	'Alamri, Hassan Abdullah S' : 'Avumimus@aol.com',
+	'Olivia Ayala': 'oliviaayalay@gmail.com',
+	'Adrian Baran': 'adrian.baran.30@gmail.com',
+	'Gabriel Bouzard': 'gabrielbouzard14@gmail.com', 
+	'Nathaniel Brengle': 'nathaniel.brengle@gmail.com ',
+	'Benjamin Conrad': 'bconrad18@gmail.com',
+	'Nupur Ketan Desai': 'nupurdesai1990@gmail.com',
+	'Sara El Koutbia': 'SELKOUTB@depaul.edu ',
+	'Ru Fang': 'RFANG2@mail.depaul.edu',
+	'Corina Mercedes Ferrer Marcano': 'corinaferrer93@gmail.com',
+	'Chandler Gegg': 'chandlergegg@gmail.com',
+	'Gaurav Gupta': 'gauravkrishn30@gmail.com',
+	'Andrew Johnson': 'avumimus@aol.com',
+	'Jing Li': 'jane.jingli.0810@gmail.com ',
+	'Wenchuang Liu': 'trevortyy@gmail.com ',
+	'Li-Wey Lu': 'LIWEYLU@GMAIL.COM',
+	'Sviatlana Matchenia': 'vibirau@gmail.com',
+	'Karrin Melton': 'karrinjmelton@gmail.com',
+	'Jay Pan': 'jay.pan67@gmail.com',
+	'Hieu Dang Dac Pham': 'dachieu1701@gmail.com',
+	'Dmitry Shatalov': 'WIZARD511@HOTMAIL.COM',
+	'Junhua Shi': 'shijh302@gmail.com',
+	'Manish Singh': 'manish_singh91@live.com', 
+	'Carl Smith': 'CARLEUGENE@AOL.COM',
+	'Yunyun Tao': 'innoshatalov@gmail.com',
+	'Travis Vaughn': 'travis.christopher.vaughn@gmail.com ',
+	'Michael Vieth': 'michaelsoccer35@gmail.com ',
+	'Jonathan Wilkison': 'jwilkis2@gmail.com',
+	'Qianru Wu': 'qianru.wu@outlook.com',
+	'Aolin Yang': 'yangal321@gmail.com ',
+	'lawen liu': 'lwc541117@hotmail.com'
+} ;
+
+
+
+window.onload =function () {
+
+for (var item in data) {
+//create new div and add some value
+    var newDiv = document.createElement('div');
+    newDiv.id = data[item]; 
+    newDiv.className = "data";
+    newDiv.innerHTML = data[item];
+//add var elements
+    document.body.append(item);
+	
+}
+
+
+
+}
+
+
+
+document.getElementById('btn1').addEventListener('click', function () {
+
+
+
+/*  LOAD JSON FILE LOCALLY - NEED to run page on localhost http to retrieve JSON -
+
+var request = new XMLHttpRequest();
+request.overrideMimeType("application/json");
+request.open('GET', 'class-email-dictionary', true);
+
+request.onload = function() {
+
+ if (request.status >= 200  && request.status <400) {
+
+var data = JSON.parse(request.responseText);
+
+alert(data[1]);
+} 
+
+};
+
+
+request.send();
+
+*/
+
+
+var input = document.getElementById("userInput").value;
+
+
+
+for (var key in data) {
+	var keyjson= data[key];
+
+	if(key== input) {
+
+			alert(keyjson);
+
+			}
+
+
+}
+		
+
+
+
+
+});
+
+
+</script>
