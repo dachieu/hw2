@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+
+<input type="text" id="userInput" </input>
+
+<button id="btn1"> add
+</button>
+
+<button id="btn2">remove 
+
+</button>
+
+<div id="display"> 
+
+
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+
+   document.getElementById('btn1').addEventListener('click', function () {
+
+var list = document.getElementById("userInput").value;
+
+//document.getElementById("display").innerHTML= Inputs
+
+
+var newDiv = document.createElement('div');
+    newDiv.id = list; 
+    newDiv.className = "list";
+    newDiv.innerHTML = list;
+//add var elements
+    document.body.appendChild(newDiv);
+
+//                alert("Please enter a valid input");
+
+});
+
+
+
+
+document.getElementById('btn2').addEventListener('click', function removeElement(display, list) {
+
+if (list == display) { alert("cannot remove parent"); }
+
+else if (document.getElementById(list)) {
+
+	var child = document.getElementById(list);
+	var parent = document.getElementById(display);
+	parent.removeChild(child);
+
+}
+
+else { alert("not exist") 
+	return false; }
+
+
+
+//	var removeID =document.getElementById("userInput");
+//var index= array.indexOf(removeID);
+//removeID.removeChild(removeID.childNodes[0]);
+
+
+});
+</script>
